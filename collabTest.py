@@ -43,3 +43,28 @@ class Soup(Food):
         slurped = True
         print("You have slurped your",self.type,"soup.")
         return slurped
+
+def test_cook():
+    food = Food()
+    assert food.cook() == True
+
+def test_refridgerate():
+    food = Food()
+    assert food.refridgerate() == "cold"
+
+def test_warmUp():
+    food = Food()
+    assert food.warmUp() == "warm"
+
+def test_stir():
+    soup = Soup("chicken")
+    assert soup.stir() == True
+
+def test_salt():
+    soup = Soup("chicken")
+    assert soup.salt() == True
+
+def test_slurp():
+    soup = Soup("chicken")
+    assert soup.slurp() == True
+
